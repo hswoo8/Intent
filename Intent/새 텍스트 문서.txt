@@ -1,0 +1,47 @@
+Intent는 일종의 메시지 객체
+다른 앱 구성요소로부터 작업을 요청할 수 있습니다.
+
+startActivity()로 Intent를 전달하면 새 인스턴스를 시작할수 있습니다.
+액티비티가 완료되었을 때 결과를 수신하려면 startActivityForResult()를 호출합니다
+
+Intent는 안드로이드 시스템이 어느 구성요소를 시작할지 판별하는데 사용하는 정보를 담고있습니다.
+정확한 구성요소 이름 또는 인텐트를 수신해야 하는 구성 요소 카테고리 등 또한 수신자 구성요소가 작업을 
+적절히 수행하기 위해 사용할 정보
+
+구성 요소 이름, 작업, 데이터, 카테고리, 엑스트라, 플래그
+
+구성요소 이름의 유무에 따라 명시적, 암시적 인텐트로 나뉜다.
+Intent의 필드는 ComponentName 객체로, 대상 구성 요소의 정규화된 클래스 이름을 사용하여 지정할 수 있다
+com.example.ExampleActivity 구성 요소 이름을 설정하려면 setComponent(), setClass() setClassName(), 생성자
+를 사용합니다
+
+작업 : 수행할 작업을 나타내는 문자열
+ACTION_VIEW, ACTION_SEND
+시스템의 설정앱에서 특정 화면을 여는 작업의 경우 Settings 를 확인
+작업을 설정하려면 setAction(), 생성자 를 사용합니다
+나름의 작업을 직접 정의하는 경우 앱의 패키지 이름을 접두어로 포함시켜야 합니다.
+static final String ACTION_TIMETRAVEL = "com.yourapp.action.TIMETRAVEL";
+
+데이터
+	작업을 수행할 데이터 및 해당 데이터의 MIME 유형을 참조하는 URI입니다.
+	인텐트를 생성할 때 URI외에도 데이터의 유형을 지정하는 것이 중요하다
+	(ex. URI형식이 비슷한 두가지 기능의 경우 MIME유형을 지정해두면 인텐트를 수신할 최상의 구성요소
+	를 찾는데 도움이 됩니다. 하지만 MIME 유형은 URI에서 추론되는 경우가 있습니다.)
+	데이터가 content:URI 인경우 데이터가 기기에 위치하고 있고 ContentProvider가 제어한다는 것을 	
+	나타내어 해당 데이터 MIME 유형이 시스템에 표시되도록 한다.
+	데이터 URI를 설정하려면 setData(), MIME를 설정하려면 setType(), 동시 설정은 setDataAndType()
+	(setData()와 setType()은 서로 값을 무효화 하므로 각각 쓰면 안된다)
+
+카테고리
+엑스트라
+플래그
+	Intent클래스에서 정의된 플래그로 인텐트에 대한 메타데이터
+	안드로이드 시스템에 액티비티를 시작할 방법에 대한 지침을 줄 수 있고(ex. 어느 Task에 소속되어야)
+	액티비티를 시작한 다음에 어떻게 처리해야 하는지 알려줄 수 있다.
+	(ex. 최근 액티비티 목록에 소속되는지 여부)
+	설정하려면 setFlags()
+	
+
+
+Task
+Affinity
