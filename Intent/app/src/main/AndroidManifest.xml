@@ -28,6 +28,7 @@
         <activity
             android:name=".StandardActivity"
             android:launchMode="standard" />
+        <activity android:name=".BaseActivity"></activity>
     </application>
 
 </manifest>
