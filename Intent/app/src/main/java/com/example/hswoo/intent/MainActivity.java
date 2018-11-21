@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        findViewById(R.id.standard).setOnClickListener(view -> startActivity(new Intent(this, BaseActivity.class)));
+        findViewById(R.id.standard).setOnClickListener(
+                view -> startActivity(new Intent(this, com.example.hswoo.intent.flag.BaseActivity.class)));
 
 
     }

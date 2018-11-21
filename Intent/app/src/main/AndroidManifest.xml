@@ -28,7 +28,12 @@
         <activity
             android:name=".StandardActivity"
             android:launchMode="standard" />
-        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".flag.NewTaskActivity" />
+        <activity android:name=".flag.SingleTopActivity" />
+        <activity android:name=".flag.ClearTopActivity" />
+        <activity  android:name=".flag.BaseActivity" />
+        <activity android:name=".flag.NoFlagActivity"></activity>
     </application>
 
 </manifest>

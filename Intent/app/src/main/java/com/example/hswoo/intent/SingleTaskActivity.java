@@ -7,4 +7,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class SingleTaskActivity extends BaseActivity {
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
+    }
 }

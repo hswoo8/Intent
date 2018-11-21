@@ -1,12 +1,13 @@
-package com.example.hswoo.intent;
+package com.example.hswoo.intent.flag;
 
-import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.TextView;
+
+import com.example.hswoo.intent.R;
 
 public class SingleTopActivity extends BaseActivity {
+    @NonNull
     @Override
     public String toString() {
         return getClass().getSimpleName();
