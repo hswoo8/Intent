@@ -1,0 +1,7 @@
+Declaring dependencies(의존성 선언)
+	1. open the build.gradle file for your app or moudule
+	2. 종속성으로 필요한 아티팩트(라이브러리)를 추가하시오
+	3. 모든 종석성을 추가하거나 부분 집합을 선택할 수 있다.  ??
+
+AndroidX
+Kotlin
